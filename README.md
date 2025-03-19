@@ -77,11 +77,20 @@ Le modèle génère et enregistre des images à chaque époque dans **`generated
 - Reçoit une image et prédit si elle est **réelle ou générée**.
 - Utilise des **couches convolutionnelles** avec `LeakyReLU` et `BatchNorm`.
 
-##  Résultats Attendus
+## Résultats Attendus
 
-    **Au début** : Les images générées sont floues et bruitées.  
-    **Après plusieurs époques** : Les visages deviennent plus nets et réalistes.  
-    **Surveillance de la convergence** : Via la **perte du discriminateur et du générateur**.
+### Évolution des images générées au fil du temos
+
+| Epoch 1 | Epoch 25 | Epoch 50 |
+|---------|---------|---------|
+| ![Epoch 1](generated_images/epoch_1.png) | ![Epoch 25](generated_images/epoch_25.png) | ![Epoch 50](generated_images/epoch_50.png) |
+
+**Analyse des résultats** :
+- **Epoch 1** : Les images sont très bruitées et non reconnaissables.
+- **Epoch 25** : Apparition de formes humaines, mais encore floues.
+- **Epoch 50** : Visages plus nets et réalistes.
+
+
 
 ##  Améliorations Possibles
 
